@@ -16,8 +16,8 @@ android {
 }
 
 dependencies {
-    api 'jp.kshoji:javax-sound-midi:0.0.4:@aar'
-    api fileTree(include: ['*.jar'], dir: 'libs')
+    implementation 'jp.kshoji:javax-sound-midi:0.0.4:@aar'
+    implementation fileTree(include: ['*.jar'], dir: 'libs')
     testImplementation 'junit:junit:4.13.2'
-    api 'androidx.legacy:legacy-support-v4:1.0.0'
+    implementation 'androidx.legacy:legacy-support-v4:1.0.0'
 }
