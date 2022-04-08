@@ -1,6 +1,34 @@
 # MidiDriver
 MIDI synthesizer for android (soundfont2 is supported)
 
+ⓘ This is a fork of [KyoSherlock/MidiDriver](https://github.com/KyoSherlock/MidiDriver) with the following changes:
+
+- Gradle and dependencies have been updated
+- [`javax.sound.midi`](https://github.com/kshoji/javax.sound.midi-for-Android) is no longer directly copied into this project but is instead added as a dependency
+- Migrated from `android.support` to `androidx`
+- This library has been published to this Git repository; to use it:
+
+  1. In `build.gradle` in your Android project, add this to the `repositories` section, e.g.
+
+     ```
+     allprojects {
+         repositories {
+             ...
+             maven { url 'https://github.com/bmaupin/MidiDriver/raw/master/repo' }
+         }
+     }
+     ```
+
+  1. In `app/build.gradle` in your Android project, add this library as a dependency, e.g.
+
+     ```
+     dependencies {
+       ...
+       implementation 'cn.sherlock:sherlockmidi:1.0'
+     ```
+
+  1. Use this library in your project; see the `sample` directory for an example
+
 # About MidiDriver
   1) Just a synthesizer for playing MIDI note on Android. You can use it with USB/Bluetooth-MIDI library together to create your MIDI application.
 
