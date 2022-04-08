@@ -6,6 +6,8 @@ android {
     defaultConfig {
         minSdkVersion 15
         targetSdkVersion 30
+        versionCode 1
+        versionName "1.0"
     }
     buildTypes {
         release {
@@ -22,4 +24,28 @@ dependencies {
     // Expose jp.kshoji.javax.sound.midi as part of the sherlockmidi API; sherlockmidi needs it
     // and clients of sherlockmidi will need it. This way we only have to track it in one place.
     api 'jp.kshoji:javax-sound-midi:0.0.4:@aar'
+}
+
+// Publish the plugin locally
+// https://stackoverflow.com/a/42160584/399105
+apply plugin: 'maven-publish'
+
+afterEvaluate {
+    publishing {
+        publications {
+            release(MavenPublication) {
+                from components.release
+                groupId 'cn.sherlock'
+                artifactId 'sherlockmidi'
+                version = android.defaultConfig.versionName
+            }
+        }
+
+        repositories {
+            maven {
+                name = "myrepo"
+                url = uri("../repo")
+            }
+        }
+    }
 }

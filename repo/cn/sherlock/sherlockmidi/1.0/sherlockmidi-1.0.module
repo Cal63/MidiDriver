@@ -1,0 +1,109 @@
+{
+  "formatVersion": "1.1",
+  "component": {
+    "group": "cn.sherlock",
+    "module": "sherlockmidi",
+    "version": "1.0",
+    "attributes": {
+      "org.gradle.status": "release"
+    }
+  },
+  "createdBy": {
+    "gradle": {
+      "version": "7.2"
+    }
+  },
+  "variants": [
+    {
+      "name": "releaseVariantReleaseApiPublication",
+      "attributes": {
+        "org.gradle.category": "library",
+        "org.gradle.dependency.bundling": "external",
+        "org.gradle.libraryelements": "aar",
+        "org.gradle.usage": "java-api"
+      },
+      "dependencies": [
+        {
+          "group": "jp.kshoji",
+          "module": "javax-sound-midi",
+          "version": {
+            "requires": "0.0.4"
+          },
+          "excludes": [
+            {
+              "group": "*",
+              "module": "*"
+            }
+          ],
+          "thirdPartyCompatibility": {
+            "artifactSelector": {
+              "name": "javax-sound-midi",
+              "type": "aar",
+              "extension": "aar"
+            }
+          }
+        }
+      ],
+      "files": [
+        {
+          "name": "sherlockmidi-1.0.aar",
+          "url": "sherlockmidi-1.0.aar",
+          "size": 263920,
+          "sha512": "84d28c5b46aa80e1800aaf3e6652b34a0841c00db1360d6c4698d9a89887f72987ac2b6a3dd1ef0ded4c725443e6b3f64cfa9dc6109e320365db6bf6823d3cae",
+          "sha256": "d92dab26eb6fce24d373352349f5010b84fc46d954800b153d3e56e784bc7fb1",
+          "sha1": "07813db3ab6794c1b349d678cae031a8135a0547",
+          "md5": "4e039103e2e7357488272e2e5415bbff"
+        }
+      ]
+    },
+    {
+      "name": "releaseVariantReleaseRuntimePublication",
+      "attributes": {
+        "org.gradle.category": "library",
+        "org.gradle.dependency.bundling": "external",
+        "org.gradle.libraryelements": "aar",
+        "org.gradle.usage": "java-runtime"
+      },
+      "dependencies": [
+        {
+          "group": "androidx.legacy",
+          "module": "legacy-support-v4",
+          "version": {
+            "requires": "1.0.0"
+          }
+        },
+        {
+          "group": "jp.kshoji",
+          "module": "javax-sound-midi",
+          "version": {
+            "requires": "0.0.4"
+          },
+          "excludes": [
+            {
+              "group": "*",
+              "module": "*"
+            }
+          ],
+          "thirdPartyCompatibility": {
+            "artifactSelector": {
+              "name": "javax-sound-midi",
+              "type": "aar",
+              "extension": "aar"
+            }
+          }
+        }
+      ],
+      "files": [
+        {
+          "name": "sherlockmidi-1.0.aar",
+          "url": "sherlockmidi-1.0.aar",
+          "size": 263920,
+          "sha512": "84d28c5b46aa80e1800aaf3e6652b34a0841c00db1360d6c4698d9a89887f72987ac2b6a3dd1ef0ded4c725443e6b3f64cfa9dc6109e320365db6bf6823d3cae",
+          "sha256": "d92dab26eb6fce24d373352349f5010b84fc46d954800b153d3e56e784bc7fb1",
+          "sha1": "07813db3ab6794c1b349d678cae031a8135a0547",
+          "md5": "4e039103e2e7357488272e2e5415bbff"
+        }
+      ]
+    }
+  ]
+}
