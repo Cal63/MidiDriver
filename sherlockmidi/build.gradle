@@ -25,8 +25,7 @@ dependencies {
     implementation 'com.github.bmaupin:javax.sound.midi-for-Android:fix-jitpack-build-SNAPSHOT'
 }
 
-// Publish the plugin locally
-// https://stackoverflow.com/a/42160584/399105
+// This is used by JitPack for publishing (https://docs.jitpack.io/android/)
 apply plugin: 'maven-publish'
 
 afterEvaluate {
@@ -37,13 +36,6 @@ afterEvaluate {
                 groupId 'cn.sherlock'
                 artifactId 'sherlockmidi'
                 version = android.defaultConfig.versionName
-            }
-        }
-
-        repositories {
-            maven {
-                name = "myrepo"
-                url = uri("../repo")
             }
         }
     }
